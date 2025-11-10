@@ -78,14 +78,19 @@ section h3 {
 }
 
 .participants-list {
-  list-style: disc;
-  margin-left: 18px;
+  /* hide default bullets and reset left padding so items align with card */
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
   max-height: 120px;
   overflow-y: auto;
   padding-right: 6px;
 }
 
 .participants-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 6px 8px;
   margin-bottom: 6px;
   background: linear-gradient(90deg, rgba(233,240,255,0.6), rgba(245,249,255,0.6));
@@ -93,6 +98,21 @@ section h3 {
   border: 1px solid rgba(26,35,126,0.06);
   font-size: 14px;
   color: #123;
+}
+
+.unregister-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  padding: 4px;
+  color: #c62828;
+}
+
+.unregister-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.85;
 }
 
 .no-participants {
